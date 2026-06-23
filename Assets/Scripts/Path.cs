@@ -3,7 +3,12 @@ using UnityEditor;
 
 public class Path : MonoBehaviour
 {
+    //!!!EVERYTHING HERE IS VISIBLE ONLY IN EDITOR VIEW!!!
     public GameObject[] waypoints;
+    public Vector3 getWaypointPosition(int index)
+    {
+        return waypoints[index].transform.position;
+    }
     // OnDrawGizmos is used to draw lines betweend waypoints, you can only see them in editor. Not in game view.
     private void OnDrawGizmos()
     {
